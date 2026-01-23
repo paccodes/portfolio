@@ -56,6 +56,10 @@ body {
   margin: 0;
 }
 
+p a::after {
+  width: 100%;
+}
+
 body:has(menu:not(.hidden)) {
   overflow: hidden;
 }
