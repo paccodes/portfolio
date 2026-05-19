@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>pacsh</title>
+  <rect width="64" height="64" rx="12" fill="#1f1f28" />
+  <g transform="translate(-5.83 -11.2) scale(1.35)">
+  <path fill="#ffa066" d="M17 22 A18 18 0 1 1 17 42 L32 32 Z" />
+  <path
+    stroke="#7e9cd8"
+    stroke-width="4.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    d="M7.8 19.2 L27 32 L7.8 44.8"
+  />
+  <path
+    stroke="#1f1f28"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    fill="none"
+    d="M31 44.8 L45 44.8"
+  />
+  <path
+    stroke="#7e9cd8"
+    stroke-width="4.2"
+    stroke-linecap="round"
+    fill="none"
+    d="M31 44.8 L45 44.8"
+  />
+  </g>
+</svg>

@@ -1,31 +1,33 @@
 {
-  "name": "portfolio",
-  "version": "2.0.0",
-  "description": "metapho.re's digital portfolio",
+  "name": "pacsh",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix --ext .ts ./src",
-    "stylelint": "stylelint \"src/**/*.css\" --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "stylelint:fix": "stylelint \"src/**/*.css\" --fix"
   },
-  "type": "module",
-  "author": "Pierre-Alain Castella",
-  "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.46.3",
-    "@typescript-eslint/parser": "^8.46.3",
-    "eslint": "^9.39.1",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "stylelint": "^16.25.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.11.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
-    "stylelint-order": "^7.0.0",
-    "typescript": "^5.9.3",
-    "vite": "^7.2.2"
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.3",
+    "vite": "^8.0.12"
   },
   "dependencies": {
-    "gsap": "^3.13.0"
+    "@fontsource/jetbrains-mono": "^5.2.8"
   }
 }

@@ -1,23 +1,55 @@
-My [digital portfolio](https://metapho.re/).
+# 🖥️ pacsh
 
-## Installation
+A terminal-flavored portfolio site. Type a command, get a response — no buttons, no scroll-jacking, just a prompt.
 
+Live at [pac.codes](https://pac.codes).
+
+## 💻 Commands
+
+| Command      | Description                       |
+| ------------ | --------------------------------- |
+| 👤 `about`    | Short biography.                  |
+| 🎓 `certs`    | Certifications and coursework.    |
+| ✉️ `contact`  | Email and social profiles.        |
+| 🚀 `projects` | Showcase of recent projects.      |
+| 🎨 `theme`    | Dark / light toggle.              |
+| ❓ `help`     | List of available commands.       |
+| 🧹 `clear`    | Terminal reset.                   |
+
+Tab-completion and command history (↑/↓) work as you'd expect.
+
+## 🧱 Stack
+
+- **Vite** + **TypeScript**, no UI framework
+- **JetBrains Mono** via `@fontsource`
+- ESLint, Prettier, Stylelint
+- Hand-rolled renderer, input handling, autocomplete, history, and scroll
+
+The whole thing is a few hundred lines of TypeScript organized into three folders: `content/` (what to render), `input/` (keys, clicks, history), and `view/` (the renderer and the prompt).
+
+## 🛠️ Development
+
+```sh
 npm install
+npm run dev       # vite dev server
+npm run build     # tsc + vite build → dist/
+npm run preview   # serve the build
+npm run lint      # eslint
+npm run stylelint # stylelint
+npm run format    # prettier
+```
 
-## Usage
+## 📁 Project layout
 
-`npm run dev`: starts the dev server
-`npm run build`: creates a production build
-`npm run preview`: serves the production build
+```
+src/
+├── commands.ts      # command registry
+├── theme.ts         # dark/light persistence
+├── content/         # rendered output for each command
+├── input/           # key bindings, history, autocomplete
+└── view/            # renderer, prompt, banner, scroll
+```
 
-## Built with
+## 📄 License
 
-- [GSAP](https://github.com/greensock/GSAP) - the animations
-
-## Author
-
-- **Pierre-Alain Castella** - _Initial work_ - [metapho-re](https://github.com/metapho-re)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[MIT](./LICENSE) © Pierre-Alain Castella
