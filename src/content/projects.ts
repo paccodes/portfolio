@@ -112,11 +112,12 @@ const formatProject = (project: Project): Line[] => [
   },
 ];
 
-const intro: Line[] = [
+const outro: Line[] = [
+  blankLine,
   {
     type: "p",
     segments: [
-      { text: "All projects live on " },
+      { text: "More on " },
       {
         text: "GitHub",
         className: "tone-link",
@@ -125,12 +126,11 @@ const intro: Line[] = [
       { text: "." },
     ],
   },
-  blankLine,
 ];
 
 export const projects = [
-  ...intro,
   ...projectsData
     .map(formatProject)
     .flatMap((lines, index) => (index === 0 ? lines : [blankLine, ...lines])),
+  ...outro,
 ];
