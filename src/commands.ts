@@ -5,8 +5,10 @@ import {
   contact,
   echo,
   help,
+  history as renderHistory,
   projects,
 } from "./content";
+import { history } from "./input";
 import { toggleTheme } from "./theme";
 import type { Line } from "./types";
 import { clearOutput, mountPromptLine, typeLines } from "./view";
@@ -20,6 +22,7 @@ const commands: Record<string, Command> = {
   contact,
   echo,
   help,
+  history: () => renderHistory(history),
   projects,
   theme: toggleTheme,
 };

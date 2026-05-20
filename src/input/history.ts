@@ -1,13 +1,13 @@
-const entries: string[] = [];
+export const history: string[] = [];
 
 let cursor = 0;
 
 export const pushHistory = (entry: string): void => {
-  if (entries[entries.length - 1] !== entry) {
-    entries.push(entry);
+  if (history[history.length - 1] !== entry) {
+    history.push(entry);
   }
 
-  cursor = entries.length;
+  cursor = history.length;
 };
 
 export const getPrevious = (): string | null => {
@@ -17,15 +17,15 @@ export const getPrevious = (): string | null => {
 
   cursor -= 1;
 
-  return entries[cursor];
+  return history[cursor];
 };
 
 export const getNext = (): string | null => {
-  if (cursor >= entries.length) {
+  if (cursor >= history.length) {
     return null;
   }
 
   cursor += 1;
 
-  return cursor === entries.length ? "" : entries[cursor];
+  return cursor === history.length ? "" : history[cursor];
 };

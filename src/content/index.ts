@@ -4,5 +4,6 @@ export { certs } from "./certs";
 export { contact } from "./contact";
 export { echo } from "./echo";
 export { help } from "./help";
+export { history } from "./history";
 export { intro } from "./intro";
 export { projects } from "./projects";
