@@ -6,15 +6,16 @@ Live at [pac.codes](https://pac.codes).
 
 ## 💻 Commands
 
-| Command      | Description                       |
-| ------------ | --------------------------------- |
-| 👤 `about`    | Short biography.                  |
-| 🎓 `certs`    | Certifications and coursework.    |
-| ✉️ `contact`  | Email and social profiles.        |
-| 🚀 `projects` | Showcase of recent projects.      |
-| 🎨 `theme`    | Dark / light toggle.              |
-| ❓ `help`     | List of available commands.       |
-| 🧹 `clear`    | Terminal reset.                   |
+| Command      | Description                 |
+| ------------ | --------------------------- |
+| 👤 `about`    | Once upon a dev.            |
+| 🎓 `certs`    | Certifiably qualified.      |
+| ✉️ `contact`  | Reach out and ping someone. |
+| 📣 `echo`     | Yell into the void.         |
+| 🚀 `projects` | My greatest commits.        |
+| 🎨 `theme`    | Mood lighting.              |
+| ❓ `help`     | SOS, fully spelled out.     |
+| 🧹 `clear`    | Wipe the prompt clean.      |
 
 Tab-completion and command history (↑/↓) work as you'd expect.
 

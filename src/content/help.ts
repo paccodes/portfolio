@@ -22,6 +22,7 @@ export const help: Line[] = [
   getHelpItem("certs", "Certifiably qualified."),
   getHelpItem("clear", "Wipe the prompt clean."),
   getHelpItem("contact", "Reach out and ping someone."),
+  getHelpItem("echo", "Yell into the void."),
   getHelpItem("projects", "My greatest commits."),
   getHelpItem("theme", "Mood lighting."),
   getHelpItem("help", "SOS, fully spelled out."),
