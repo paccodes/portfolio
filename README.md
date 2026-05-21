@@ -6,17 +6,18 @@ Live at [pac.codes](https://pac.codes).
 
 ## 💻 Commands
 
-| Command       | Description                   |
-| ------------- | ----------------------------- |
-| 👤 `about`     | Once upon a dev.              |
-| 🎓 `certs`     | I paid money for these.       |
-| ✉️ `contact`   | Slide into my packets.        |
-| 📣 `echo`      | Yell into the void.           |
-| 📜 `history`   | Your command rap sheet.       |
-| 🚀 `projects`  | My greatest commits.          |
-| 🎨 `theme`     | Light mode is a cry for help. |
-| ❓ `help`      | SOS, fully spelled out.       |
-| 🧹 `clear`     | Wipe the prompt clean.        |
+| Command          | Description                   |
+| ---------------- | ----------------------------- |
+| 👤 `about`        | Once upon a dev.              |
+| 🎓 `certs`        | I paid money for these.       |
+| 🌈 `colorscript`  | ASCII art with a paint job.   |
+| ✉️ `contact`      | Slide into my packets.        |
+| 📣 `echo`         | Yell into the void.           |
+| 📜 `history`      | Your command rap sheet.       |
+| 🚀 `projects`     | My greatest commits.          |
+| 🎨 `theme`        | Light mode is a cry for help. |
+| ❓ `help`         | SOS, fully spelled out.       |
+| 🧹 `clear`        | Wipe the prompt clean.        |
 
 Tab-completion and command history (↑/↓) work as you'd expect.
 

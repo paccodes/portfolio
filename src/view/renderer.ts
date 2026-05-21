@@ -14,6 +14,12 @@ const renderLine = async (line: Line): Promise<void> => {
 
   lineElement.classList.add("line", "typing");
 
+  if (line.style) {
+    for (const [key, value] of Object.entries(line.style)) {
+      lineElement.style.setProperty(key, value);
+    }
+  }
+
   app.appendChild(lineElement);
 
   const segmentNodes = line.segments.map((segment) => {

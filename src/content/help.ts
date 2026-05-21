@@ -7,7 +7,7 @@ const getHelpItem = (name: string, description: string): Line => ({
   segments: [
     { text: "  " },
     { text: name, command: name },
-    { text: " ".repeat(Math.max(1, 12 - name.length)) },
+    { text: " ".repeat(Math.max(1, 14 - name.length)) },
     { text: description },
   ],
 });
@@ -21,6 +21,7 @@ export const help: Line[] = [
   getHelpItem("about", "Once upon a dev."),
   getHelpItem("certs", "I paid money for these."),
   getHelpItem("clear", "Wipe the prompt clean."),
+  getHelpItem("colorscript", "ASCII art with a paint job."),
   getHelpItem("contact", "Slide into my packets."),
   getHelpItem("echo", "Yell into the void."),
   getHelpItem("history", "Your command rap sheet."),

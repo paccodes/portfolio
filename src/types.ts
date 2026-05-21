@@ -5,4 +5,8 @@ export type Segment = {
   href?: string;
 };
 
-export type Line = { type: keyof HTMLElementTagNameMap; segments: Segment[] };
+export type Line = {
+  type: keyof HTMLElementTagNameMap;
+  segments: Segment[];
+  style?: Record<string, string>;
+};

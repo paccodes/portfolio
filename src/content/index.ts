@@ -1,6 +1,7 @@
 export { about } from "./about";
 export { blankLine } from "./blank-line";
 export { certs } from "./certs";
+export { colorscript } from "./colorscript";
 export { contact } from "./contact";
 export { echo } from "./echo";
 export { help } from "./help";
