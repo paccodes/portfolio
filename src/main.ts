@@ -1,11 +1,13 @@
 import "./style.css";
 
 import { intro } from "./content";
+import { initializeCrt } from "./crt";
 import { bindClicks, bindKeys } from "./input";
 import { initializeTheme } from "./theme";
 import { mountPromptLine, showBanner, typeLines } from "./view";
 
 initializeTheme();
+initializeCrt();
 bindClicks();
 bindKeys();
 

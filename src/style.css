@@ -67,6 +67,39 @@
   }
 }
 
+@keyframes crt-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 0.97;
+  }
+
+  50% {
+    opacity: 0.94;
+  }
+
+  55% {
+    opacity: 0.98;
+  }
+}
+
+@keyframes crt-textflicker {
+  from {
+    text-shadow:
+      1px 0 0 var(--crt-aberration-magenta),
+      -2px 0 0 var(--crt-aberration-green);
+  }
+
+  to {
+    text-shadow:
+      2px 0.5px 2px var(--crt-aberration-magenta),
+      -1px -0.5px 2px var(--crt-aberration-green);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -357,4 +390,55 @@ body {
   color: var(--fg);
   font: inherit;
   outline: 0;
+}
+
+.crt {
+  --crt-aberration-magenta: rgb(234 54 175 / 70%);
+  --crt-aberration-green: rgb(117 250 105 / 70%);
+  --crt-vignette-start: 70%;
+  --crt-vignette-edge: rgb(0 0 0 / 55%);
+}
+
+.crt.theme-light {
+  --crt-vignette-start: 85%;
+  --crt-vignette-edge: rgb(0 0 0 / 18%);
+}
+
+.crt button,
+.crt input {
+  text-shadow: inherit;
+}
+
+.crt body {
+  animation:
+    crt-flicker 4s infinite,
+    crt-textflicker 0.01s infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt body {
+    animation: none;
+  }
+}
+
+.crt body::before {
+  position: fixed;
+  z-index: 9999;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 18%) 0,
+      rgb(0 0 0 / 18%) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent var(--crt-vignette-start),
+      var(--crt-vignette-edge) 100%
+    );
+  content: "";
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }

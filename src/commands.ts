@@ -9,6 +9,7 @@ import {
   history as renderHistory,
   projects,
 } from "./content";
+import { toggleCrt } from "./crt";
 import { history } from "./input";
 import { toggleTheme } from "./theme";
 import type { Line } from "./types";
@@ -22,6 +23,7 @@ const commands: Record<string, Command> = {
   clear: clearOutput,
   colorscript,
   contact,
+  crt: toggleCrt,
   echo,
   help,
   history: () => renderHistory(history),

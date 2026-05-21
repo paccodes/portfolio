@@ -23,6 +23,7 @@ export const help: Line[] = [
   getHelpItem("clear", "Wipe the prompt clean."),
   getHelpItem("colorscript", "ASCII art with a paint job."),
   getHelpItem("contact", "Slide into my packets."),
+  getHelpItem("crt", "Phosphor and scanlines, baby."),
   getHelpItem("echo", "Yell into the void."),
   getHelpItem("history", "Your command rap sheet."),
   getHelpItem("projects", "My greatest commits."),

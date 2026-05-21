@@ -12,6 +12,7 @@ Live at [pac.codes](https://pac.codes).
 | 🎓 `certs`        | I paid money for these.       |
 | 🌈 `colorscript`  | ASCII art with a paint job.   |
 | ✉️ `contact`      | Slide into my packets.        |
+| 📺 `crt`          | Phosphor and scanlines, baby. |
 | 📣 `echo`         | Yell into the void.           |
 | 📜 `history`      | Your command rap sheet.       |
 | 🚀 `projects`     | My greatest commits.          |
