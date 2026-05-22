@@ -86,17 +86,152 @@
   }
 }
 
-@keyframes crt-textflicker {
-  from {
+@keyframes crt-textshadow {
+  0% {
     text-shadow:
-      1px 0 0 var(--crt-aberration-magenta),
-      -2px 0 0 var(--crt-aberration-green);
+      0.2195px 0 1px rgb(234 54 175 / 50%),
+      -0.2195px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
   }
 
-  to {
+  5% {
     text-shadow:
-      2px 0.5px 2px var(--crt-aberration-magenta),
-      -1px -0.5px 2px var(--crt-aberration-green);
+      1.3964px 0 1px rgb(234 54 175 / 50%),
+      -1.3964px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  10% {
+    text-shadow:
+      0.0147px 0 1px rgb(234 54 175 / 50%),
+      -0.0147px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  15% {
+    text-shadow:
+      0.2011px 0 1px rgb(234 54 175 / 50%),
+      -0.2011px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  20% {
+    text-shadow:
+      1.7397px 0 1px rgb(234 54 175 / 50%),
+      -1.7397px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  25% {
+    text-shadow:
+      0.8063px 0 1px rgb(234 54 175 / 50%),
+      -0.8063px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  30% {
+    text-shadow:
+      0.3508px 0 1px rgb(234 54 175 / 50%),
+      -0.3508px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  35% {
+    text-shadow:
+      1.9485px 0 1px rgb(234 54 175 / 50%),
+      -1.9485px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  40% {
+    text-shadow:
+      1.9354px 0 1px rgb(234 54 175 / 50%),
+      -1.9354px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  45% {
+    text-shadow:
+      1.1155px 0 1px rgb(234 54 175 / 50%),
+      -1.1155px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  50% {
+    text-shadow:
+      0.0404px 0 1px rgb(234 54 175 / 50%),
+      -0.0404px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  55% {
+    text-shadow:
+      1.1879px 0 1px rgb(234 54 175 / 50%),
+      -1.1879px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  60% {
+    text-shadow:
+      1.1011px 0 1px rgb(234 54 175 / 50%),
+      -1.1011px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  65% {
+    text-shadow:
+      1.4319px 0 1px rgb(234 54 175 / 50%),
+      -1.4319px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  70% {
+    text-shadow:
+      0.2444px 0 1px rgb(234 54 175 / 50%),
+      -0.2444px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  75% {
+    text-shadow:
+      0.9474px 0 1px rgb(234 54 175 / 50%),
+      -0.9474px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  80% {
+    text-shadow:
+      0.0416px 0 1px rgb(234 54 175 / 50%),
+      -0.0416px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  85% {
+    text-shadow:
+      0.0488px 0 1px rgb(234 54 175 / 50%),
+      -0.0488px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  90% {
+    text-shadow:
+      1.7216px 0 1px rgb(234 54 175 / 50%),
+      -1.7216px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  95% {
+    text-shadow:
+      1.0920px 0 1px rgb(234 54 175 / 50%),
+      -1.0920px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
+  }
+
+  100% {
+    text-shadow:
+      1.3104px 0 1px rgb(234 54 175 / 50%),
+      -1.3104px 0 1px rgb(117 250 105 / 30%),
+      0 0 3px;
   }
 }
 
@@ -153,6 +288,8 @@ body {
   display: block;
   min-height: 1.55em;
   margin: 0;
+  contain-intrinsic-size: auto 1.55em;
+  content-visibility: auto;
   white-space: pre-wrap;
 }
 
@@ -392,18 +529,6 @@ body {
   outline: 0;
 }
 
-.crt {
-  --crt-aberration-magenta: rgb(234 54 175 / 70%);
-  --crt-aberration-green: rgb(117 250 105 / 70%);
-  --crt-vignette-start: 70%;
-  --crt-vignette-edge: rgb(0 0 0 / 55%);
-}
-
-.crt.theme-light {
-  --crt-vignette-start: 85%;
-  --crt-vignette-edge: rgb(0 0 0 / 18%);
-}
-
 .crt button,
 .crt input {
   text-shadow: inherit;
@@ -411,34 +536,31 @@ body {
 
 .crt body {
   animation:
-    crt-flicker 4s infinite,
-    crt-textflicker 0.01s infinite alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .crt body {
-    animation: none;
-  }
+    crt-textshadow 1.6s steps(12) infinite,
+    crt-flicker 4s steps(12) infinite;
 }
 
 .crt body::before {
   position: fixed;
   z-index: 9999;
   background:
-    repeating-linear-gradient(
-      to bottom,
-      rgb(0 0 0 / 18%) 0,
-      rgb(0 0 0 / 18%) 1px,
-      transparent 1px,
-      transparent 3px
-    ),
-    radial-gradient(
-      ellipse at center,
-      transparent var(--crt-vignette-start),
-      var(--crt-vignette-edge) 100%
+    linear-gradient(rgb(18 16 16 / 0%) 50%, rgb(0 0 0 / 25%) 50%),
+    linear-gradient(
+      90deg,
+      rgb(255 0 0 / 6%),
+      rgb(0 255 0 / 2%),
+      rgb(0 0 255 / 6%)
     );
+  background-size:
+    100% 2px,
+    3px 100%;
   content: "";
   inset: 0;
-  mix-blend-mode: multiply;
   pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt body {
+    animation: none;
+  }
 }
