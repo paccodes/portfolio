@@ -7,5 +7,7 @@ export { echo } from "./echo";
 export { help } from "./help";
 export { history } from "./history";
 export { intro } from "./intro";
+export { ls } from "./ls";
 export { moo } from "./moo";
 export { projects } from "./projects";
+export { resume } from "./resume";

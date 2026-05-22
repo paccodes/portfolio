@@ -26,9 +26,11 @@ export const help: Line[] = [
   getHelpItem("crt", "Phosphor and scanlines, baby."),
   getHelpItem("echo", "Yell into the void."),
   getHelpItem("history", "Your command rap sheet."),
+  getHelpItem("ls", "The whole shebang."),
   getHelpItem("moo", "Bovine wisdom on demand."),
   getHelpItem("pipes", "Screensaver from a forgotten cubicle."),
   getHelpItem("projects", "My greatest commits."),
+  getHelpItem("resume", "Press resume on my career."),
   getHelpItem("theme", "Light mode is a cry for help."),
   getHelpItem("help", "SOS, fully spelled out."),
 ];

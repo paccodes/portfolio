@@ -7,8 +7,10 @@ import {
   echo,
   help,
   history as renderHistory,
+  ls as renderLs,
   moo,
   projects,
+  resume,
 } from "./content";
 import { toggleCrt } from "./crt";
 import { history } from "./input";
@@ -29,9 +31,11 @@ const commands: Record<string, Command> = {
   echo,
   help,
   history: () => renderHistory(history),
+  ls: () => renderLs(commandNames),
   moo,
   pipes,
   projects,
+  resume,
   theme: toggleTheme,
 };
 
