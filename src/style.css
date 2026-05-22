@@ -487,6 +487,8 @@ body {
 .prompt-line {
   display: flex;
   align-items: baseline;
+  contain-intrinsic-size: auto 1.55em;
+  content-visibility: auto;
   gap: 8px;
 }
 
