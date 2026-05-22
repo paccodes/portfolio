@@ -6,20 +6,21 @@ Live at [pac.codes](https://pac.codes).
 
 ## 💻 Commands
 
-| Command          | Description                   |
-| ---------------- | ----------------------------- |
-| 👤 `about`        | Once upon a dev.              |
-| 🎓 `certs`        | I paid money for these.       |
-| 🌈 `colorscript`  | ASCII art with a paint job.   |
-| ✉️ `contact`      | Slide into my packets.        |
-| 📺 `crt`          | Phosphor and scanlines, baby. |
-| 📣 `echo`         | Yell into the void.           |
-| 📜 `history`      | Your command rap sheet.       |
-| 🐮 `moo`         | Bovine wisdom on demand.      |
-| 🚀 `projects`     | My greatest commits.          |
-| 🎨 `theme`        | Light mode is a cry for help. |
-| ❓ `help`         | SOS, fully spelled out.       |
-| 🧹 `clear`        | Wipe the prompt clean.        |
+| Command          | Description                           |
+| ---------------- | ------------------------------------- |
+| 👤 `about`        | Once upon a dev.                      |
+| 🎓 `certs`        | I paid money for these.               |
+| 🌈 `colorscript`  | ASCII art with a paint job.           |
+| ✉️ `contact`      | Slide into my packets.                |
+| 📺 `crt`          | Phosphor and scanlines, baby.         |
+| 📣 `echo`         | Yell into the void.                   |
+| 📜 `history`      | Your command rap sheet.               |
+| 🐮 `moo`         | Bovine wisdom on demand.              |
+| 🪠 `pipes`        | Screensaver from a forgotten cubicle. |
+| 🚀 `projects`     | My greatest commits.                  |
+| 🎨 `theme`        | Light mode is a cry for help.         |
+| ❓ `help`         | SOS, fully spelled out.               |
+| 🧹 `clear`        | Wipe the prompt clean.                |
 
 Tab-completion and command history (↑/↓) work as you'd expect.
 
@@ -50,6 +51,7 @@ npm run format    # prettier
 src/
 ├── commands.ts      # command registry
 ├── crt.ts           # CRT effect toggle
+├── pipes.ts         # pipes screensaver
 ├── theme.ts         # dark/light persistence
 ├── content/         # rendered output for each command
 ├── input/           # key bindings, history, autocomplete

@@ -531,6 +531,14 @@ body {
   outline: 0;
 }
 
+.pipes-canvas {
+  position: fixed;
+  z-index: 9998;
+  background: var(--bg);
+  cursor: none;
+  inset: 0;
+}
+
 .crt button,
 .crt input {
   text-shadow: inherit;

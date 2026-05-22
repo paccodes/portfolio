@@ -12,6 +12,7 @@ import {
 } from "./content";
 import { toggleCrt } from "./crt";
 import { history } from "./input";
+import { pipes } from "./pipes";
 import { toggleTheme } from "./theme";
 import type { Line } from "./types";
 import { clearOutput, mountPromptLine, typeLines } from "./view";
@@ -29,6 +30,7 @@ const commands: Record<string, Command> = {
   help,
   history: () => renderHistory(history),
   moo,
+  pipes,
   projects,
   theme: toggleTheme,
 };
