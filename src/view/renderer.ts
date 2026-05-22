@@ -5,6 +5,9 @@ import { scrollToBottom } from "./scroll";
 
 const CHAR_GAP_MS = 2;
 const CHARS_PER_TICK = 3;
+const LINE_GAP_MS = 20;
+
+const isCrt = (): boolean => document.documentElement.classList.contains("crt");
 
 const sleep = (ms: number): Promise<void> =>
   new Promise<void>((resolve) => setTimeout(resolve, ms));
@@ -50,16 +53,26 @@ const renderLine = async (line: Line): Promise<void> => {
     return node;
   });
 
-  for (let i = 0; i < line.segments.length; i++) {
-    const node = segmentNodes[i];
-    const text = line.segments[i].text;
+  if (isCrt()) {
+    for (let i = 0; i < line.segments.length; i++) {
+      segmentNodes[i].textContent = line.segments[i].text;
+    }
 
-    for (let j = 0; j < text.length; j += CHARS_PER_TICK) {
-      node.textContent += text.slice(j, j + CHARS_PER_TICK);
+    scrollToBottom();
 
-      scrollToBottom();
+    await sleep(LINE_GAP_MS);
+  } else {
+    for (let i = 0; i < line.segments.length; i++) {
+      const node = segmentNodes[i];
+      const text = line.segments[i].text;
 
-      await sleep(CHAR_GAP_MS);
+      for (let j = 0; j < text.length; j += CHARS_PER_TICK) {
+        node.textContent += text.slice(j, j + CHARS_PER_TICK);
+
+        scrollToBottom();
+
+        await sleep(CHAR_GAP_MS);
+      }
     }
   }
 
