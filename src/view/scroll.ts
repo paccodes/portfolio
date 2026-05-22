@@ -1,3 +1,14 @@
+let pending = false;
+
 export const scrollToBottom = (): void => {
-  window.scrollTo({ top: document.documentElement.scrollHeight });
+  if (pending) {
+    return;
+  }
+
+  pending = true;
+
+  requestAnimationFrame(() => {
+    pending = false;
+    window.scrollTo({ top: document.documentElement.scrollHeight });
+  });
 };
