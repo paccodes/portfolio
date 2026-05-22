@@ -48,6 +48,7 @@ npm run format    # prettier
 ```
 src/
 ├── commands.ts      # command registry
+├── crt.ts           # CRT effect toggle
 ├── theme.ts         # dark/light persistence
 ├── content/         # rendered output for each command
 ├── input/           # key bindings, history, autocomplete
