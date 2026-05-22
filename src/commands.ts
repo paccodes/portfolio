@@ -7,6 +7,7 @@ import {
   echo,
   help,
   history as renderHistory,
+  moo,
   projects,
 } from "./content";
 import { toggleCrt } from "./crt";
@@ -27,6 +28,7 @@ const commands: Record<string, Command> = {
   echo,
   help,
   history: () => renderHistory(history),
+  moo,
   projects,
   theme: toggleTheme,
 };

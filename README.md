@@ -15,6 +15,7 @@ Live at [pac.codes](https://pac.codes).
 | 📺 `crt`          | Phosphor and scanlines, baby. |
 | 📣 `echo`         | Yell into the void.           |
 | 📜 `history`      | Your command rap sheet.       |
+| 🐮 `moo`         | Bovine wisdom on demand.      |
 | 🚀 `projects`     | My greatest commits.          |
 | 🎨 `theme`        | Light mode is a cry for help. |
 | ❓ `help`         | SOS, fully spelled out.       |
