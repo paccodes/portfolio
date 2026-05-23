@@ -1,6 +1,7 @@
 import type { Line } from "../types";
 
 import { colorscripts } from "./colorscripts";
+import { withCols } from "./with-cols";
 
 const names = Object.keys(colorscripts);
 
@@ -20,30 +21,16 @@ const getNotFoundMessage = (name: string): Line[] => [
   },
 ];
 
-const getLineWidth = (line: Line): number =>
-  line.segments.reduce((sum, segment) => sum + segment.text.length, 0);
-
-const withCols = (lines: Line[]): Line[] => {
-  const widths = lines.map(getLineWidth);
-  const cols = String(Math.max(...widths));
-
-  return lines.map((line, index) =>
-    widths[index] === 0
-      ? line
-      : { ...line, style: { ...line.style, "--cols": cols } },
-  );
-};
-
 export const colorscript = (args: string): Line[] => {
   const name = args.trim();
 
   if (name === "") {
     const randomName = names[Math.floor(Math.random() * names.length)];
 
-    return withCols(colorscripts[randomName]);
+    return withCols(colorscripts[randomName], { art: true });
   }
 
   const script = colorscripts[name];
 
-  return script ? withCols(script) : getNotFoundMessage(name);
+  return script ? withCols(script, { art: true }) : getNotFoundMessage(name);
 };

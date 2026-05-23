@@ -1,5 +1,7 @@
 import type { Line, Segment } from "../types";
 
+import { withCols } from "./with-cols";
+
 const COLUMNS = 3;
 const COLUMN_WIDTH = 14;
 
@@ -7,7 +9,7 @@ export const ls = (commands: string[]): Line[] => {
   const names = [...commands].sort();
   const rows = Math.ceil(names.length / COLUMNS);
 
-  return Array.from({ length: rows }, (_, row): Line => {
+  const lines = Array.from({ length: rows }, (_, row): Line => {
     const segments: Segment[] = [];
 
     for (let col = 0; col < COLUMNS; col++) {
@@ -30,10 +32,8 @@ export const ls = (commands: string[]): Line[] => {
       }
     }
 
-    return {
-      type: "p",
-      segments,
-      style: { "white-space": "pre" },
-    };
+    return { type: "p", segments };
   });
+
+  return withCols(lines);
 };

@@ -1,6 +1,7 @@
 import type { Line } from "../types";
 
 import { fortunes, type Fortune } from "./fortunes";
+import { withCols } from "./with-cols";
 
 const BUBBLE_WIDTH = 40;
 
@@ -83,12 +84,11 @@ const bubble = (lines: string[]): string[] => {
 const getLineFromText = (text: string): Line => ({
   type: "p",
   segments: [{ text }],
-  style: { "white-space": "pre" },
 });
 
 export const moo = (): Line[] => {
   const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
   const wrappedFortune = wrapFortune(formatFortune(fortune), BUBBLE_WIDTH);
 
-  return [...bubble(wrappedFortune), ...COW].map(getLineFromText);
+  return withCols([...bubble(wrappedFortune), ...COW].map(getLineFromText));
 };
