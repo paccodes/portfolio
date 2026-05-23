@@ -20,7 +20,7 @@ export const mountPromptLine = (): void => {
       <span class="ps1-bracket">]</span>
       <span class="ps1-sigil">$</span>
     </span>
-    <input id="prompt" />
+    <input id="prompt" aria-label="Terminal prompt" />
   `;
 
   app.appendChild(promptLine);
