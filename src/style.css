@@ -1,5 +1,5 @@
-@import url("@fontsource/jetbrains-mono/400.css");
-@import url("@fontsource/jetbrains-mono/700.css");
+@import url("@fontsource/jetbrains-mono/latin-400.css");
+@import url("@fontsource/jetbrains-mono/latin-700.css");
 
 :root {
   --bg: #1f1f28;
